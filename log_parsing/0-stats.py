@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Log parsing: reads stdin, prints metrics every 10 lines or on CTRL+C"""
+"""Log parsing: reads stdin, prints metrics every 10 lines or on CTRL+C."""
 import sys
 import re
 
@@ -11,7 +11,7 @@ LOG_PATTERN = re.compile(
 
 
 def print_stats(total_size, status_counts):
-    """Print current statistics"""
+    """Print current statistics."""
     print("File size: {}".format(total_size))
     for code in sorted(status_counts):
         if status_counts[code] > 0:
